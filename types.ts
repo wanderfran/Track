@@ -44,6 +44,20 @@ export interface Campaign {
   ctr: number;
 }
 
+export interface AdSet {
+  id: string;
+  name: string;
+  status: 'active' | 'paused';
+  campaignName: string;
+  dailyBudget: number;
+  spend: number;
+  revenue: number;
+  roas: number;
+  cpa: number;
+  purchases: number;
+  ctr: number;
+}
+
 export interface Creative {
   id: string;
   thumbnail: string;

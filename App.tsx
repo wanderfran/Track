@@ -3,6 +3,7 @@ import Sidebar from './components/Sidebar';
 import Topbar from './components/Topbar';
 import Dashboard from './components/Dashboard';
 import ProductDetail from './components/ProductDetail';
+import SetsView from './components/SetsView';
 import { TimeRange, Product } from './types';
 
 const App: React.FC = () => {
@@ -45,7 +46,9 @@ const App: React.FC = () => {
             <ProductDetail product={selectedProduct} onBack={handleBackToDashboard} />
           )}
 
-          {activeView !== 'overview' && activeView !== 'product_detail' && (
+          {activeView === 'sets' && <SetsView />}
+
+          {activeView !== 'overview' && activeView !== 'product_detail' && activeView !== 'sets' && (
             <div className="flex flex-col items-center justify-center h-[60vh] text-gray-400">
                <div className="w-20 h-20 bg-white rounded-[30px] shadow-sm mb-6 flex items-center justify-center">
                   <span className="text-4xl">🚧</span>

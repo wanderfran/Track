@@ -1,4 +1,4 @@
-import { Product, Alert, ChartDataPoint, Campaign, Creative } from './types';
+import { Product, Alert, ChartDataPoint, Campaign, Creative, AdSet } from './types';
 
 export const MOCK_CHART_DATA: ChartDataPoint[] = Array.from({ length: 14 }).map((_, i) => {
   const spend = Math.floor(Math.random() * 2000) + 1000;
@@ -15,6 +15,15 @@ export const TOP_CAMPAIGNS: Campaign[] = [
   { id: '1', name: 'CNV_Escala_Aberta_01', status: 'active', spend: 4500, roas: 3.2, cpa: 45.0, ctr: 1.8 },
   { id: '2', name: 'CNV_Remarketing_7D', status: 'active', spend: 1200, roas: 4.5, cpa: 32.5, ctr: 2.1 },
   { id: '3', name: 'CNV_Teste_Lookalike', status: 'paused', spend: 800, roas: 0.8, cpa: 95.0, ctr: 0.9 },
+];
+
+export const MOCK_ADSETS: AdSet[] = [
+  { id: 'set_1', name: 'Público Aberto - Video 01', status: 'active', campaignName: 'CNV_Escala_Aberta_01', dailyBudget: 150, spend: 1250, revenue: 4125, roas: 3.3, cpa: 41.0, purchases: 30, ctr: 1.9 },
+  { id: 'set_2', name: 'Interesses - Marketing Digital', status: 'active', campaignName: 'CNV_Escala_Aberta_01', dailyBudget: 100, spend: 850, revenue: 2125, roas: 2.5, cpa: 48.0, purchases: 17, ctr: 1.5 },
+  { id: 'set_3', name: 'Lookalike 1% Compradores', status: 'paused', campaignName: 'CNV_Teste_Lookalike', dailyBudget: 80, spend: 320, revenue: 160, roas: 0.5, cpa: 160.0, purchases: 2, ctr: 0.8 },
+  { id: 'set_4', name: 'Remarketing - Checkout 7D', status: 'active', campaignName: 'CNV_Remarketing_7D', dailyBudget: 50, spend: 450, revenue: 2250, roas: 5.0, cpa: 28.0, purchases: 16, ctr: 2.4 },
+  { id: 'set_5', name: 'Remarketing - Envolvidos 30D', status: 'active', campaignName: 'CNV_Remarketing_7D', dailyBudget: 60, spend: 520, revenue: 1800, roas: 3.46, cpa: 34.6, purchases: 15, ctr: 2.1 },
+  { id: 'set_6', name: 'Público Aberto - Carrossel', status: 'active', campaignName: 'CNV_Escala_Aberta_01', dailyBudget: 150, spend: 1100, revenue: 2900, roas: 2.63, cpa: 45.8, purchases: 24, ctr: 1.6 },
 ];
 
 export const TOP_CREATIVES: Creative[] = [
